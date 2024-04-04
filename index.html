@@ -20,13 +20,15 @@
   </header>
   <section id="weather">
     <div class="weather-container">
+      <div class="option-container">
       <h2>Weather API</h2>
-      <p>Select your city to check the weather</p>
-      <input type="text" id="weatherList" placeholder="Search Your City">
-      <button onclick="fetchData(document.getElementById('weatherList').value)">Submit</button>
+      <p>Check the weather anywhere in the world!</p>
+      <input type="text" id="weatherList" placeholder="Search a City">
+      <button onclick="fetchData(document.getElementById('weatherList').value)">Search</button>
       <p id="location"></p>
       <p id="temperature"></p>
       <p id="condition"></p>
+    </div>
     </div>
   </section>
   <section class="option-1">
