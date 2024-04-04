@@ -9,24 +9,21 @@ async function fetchData(location) {
     const condition = data.current.condition.text;
     const weatherImage = data.current.condition.icon;
 
-    const imgElement = document.getElementById("weatherImage");
-    const locationElement = document.getElementById("location");
-    const temperatureElement = document.getElementById("temperature");
-    const conditionElement = document.getElementById("condition");
+      const imgElement = document.getElementById("weatherImage");
+      const locationElement = document.getElementById("location");
+      const temperatureElement = document.getElementById("temperature");
+      const conditionElement = document.getElementById("condition");
 
-    locationElement.textContent = `Location: ${locationName}`;
-    temperatureElement.textContent = `Temperature: ${temperature}°C`;
-    conditionElement.textContent = `Condition: ${condition}`;
-
-
+          locationElement.textContent = `Location: ${locationName}`;
+          temperatureElement.textContent = `Temperature: ${temperature}°C`;
+          conditionElement.textContent = `Condition: ${condition}`;
   } catch (error) {
     console.error(error);
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const submitButton = document.querySelector("button");
-  submitButton.addEventListener("click", () => {
-    fetchData(document.getElementById("weatherList").value.toLowerCase());
+  document.addEventListener("DOMContentLoaded", () => {
+    const submitButton = document.querySelector("button");
+      submitButton.addEventListener("click", () => {
+        fetchData(document.getElementById("weatherList").value.toLowerCase());
   });
 });
